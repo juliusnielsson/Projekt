@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BookDinSport</title>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+</head>
+<body>
+
+<h1>BookDinSport</h1>
+
+<div class="topnav">
+    <a href=forsiden.html>Forside</a>
+    <a href=Hold.html>Hold</a>
+    <a href=Kontakt.html>Kontakt</a>
+    <a href=om%20os.html>Om os</a>
+</div>
+<h1> Velkommen til  Book Din Sport</h1>
+<h1 style="text-align: center;" id="frontpage_user"></h1>
+<h1>Udforsk siden ved at bruge navigationsbaren!</h1>
+<script>
+    document.getElementById("frontpage_user").innerHTML =
+        localStorage.getItem("register_name")
+</script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tilmelding</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+
+<h1>BookDinSport</h1>
+
+<div class="topnav">
+<a href=forsiden.html>Forside</a>
+<a href=Hold.html>Hold</a>
+<a href=Kontakt.html>Kontakt</a>
+<a href=om%20os.html>Om os</a>
+</div>
+<br/>
+<div class="div3">
+
+        <!-- Error beskeder er nu røde for at differentiere sig og vise at de er fejl beskeder -->
+
+        <p id="validationTextRadio" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
+
+        <p id="validationTextName" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
+
+        <p id="validationTextPhonenumber" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
+
+        <p id="validationTextEmail" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
+
+        <p id="validationTextContactdate" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
+
+
+        <form name="userContact" onsubmit="return validateInformation()" method="get">
+
+            <!-- Radio buttons -->
+
+            <h2>Tilmeldingsform</h2>
+            <br/>
+            Niveau
+            <br/>
+            <input type="radio" class="difficulty" value="Elite"/>Elite
+            <br/>
+            <input type="radio" class="difficulty" value="Ovet"/>Øvet
+            <br/>
+            <input type="radio" class="difficulty" value="Nybegynder"/>Nybegynder
+
+            <br/>
+            <br/>
+
+            <!-- Text fields -->
+            Navn
+            <br/>
+            <input type="text" id="registration_name" value="" placeholder="F.eks. Anders Andersen"/>
+            <br/>
+            <br/>
+
+            &Aringrgang
+            <br/>
+            <input type="text" id="birth_year" value="" placeholder="F.eks. 1999"/>
+            <br/>
+            <br/>
+
+            Telefon nr.
+            <br/>
+            <input type="text" id="phone" value="" placeholder="F.eks. 12345678"/>
+            <br/>
+            <br/>
+
+            Email
+            <br/>
+            <input type="text" id="email" value="" placeholder="F.eks. john@gmail.com"/>
+            <br/>
+            <br/>
+
+            <!-- Dropdown lists -->
+            Tr&aeligningsdato
+            <br/>
+            <select type="text" id="training_day">
+                <option selected disabled>-Dag-</option>
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="4">04</option>
+                <option value="5">05</option>
+                <option value="6">06</option>
+                <option value="7">07</option>
+                <option value="8">08</option>
+                <option value="9">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+            </select>
+
+            <select type="text" id="training_month">
+                <option selected disabled>-M&aringned-</option>
+                <option value="Januar">Januar</option>
+                <option value="Februar">Februar</option>
+                <option value="Marts">Marts</option>
+                <option value="April">April</option>
+                <option value="Maj">Maj</option>
+                <option value="Juni">Juni</option>
+                <option value="Juli">Juli</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="Oktober">Oktober</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+
+            <select type="text" id="training_time">
+                <option selected disabled>-Tidspunkt-</option>
+                <option value="18:30">18:30</option>
+                <option value="20:00">20:00</option>
+                <option value="21:30">21:30</option>
+            </select>
+            <br/>
+            <br/>
+
+            <!-- Text area for additional comments -->
+            Yderlige kommentarer
+            <br/>
+            <textarea type="text" rows="5" cols="30" id="comment_box" value="" placeholder="Skriv anden vigtig information her!"></textarea>
+            <br/>
+            <!-- Submit button to activate some function -->
+            <button id="tilmeld_knap" type="submit" style="cursor: pointer;">Tryk for at tilmelde</button>
+        </form>
+    </div>
+
+
+<script>
+    document.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13){
+            document.getElementById("tilmeld_knap").click();
+        }
+    });
+</script>
+<script src=script.js></script>
+
+</body>
+</html>

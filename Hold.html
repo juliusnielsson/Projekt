@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hold oversigt</title>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+</head>
+<body>
+<h1> BookDinSport</h1>
+
+<div class="topnav">
+    <a href=forsiden.html>Forside</a>
+    <a href=Hold.html>Hold</a>
+    <a href=Kontakt.html>Kontakt</a>
+    <a href=om%20os.html>Om os</a>
+</div>
+<br/>
+<p style="text-align: center;" >Uoverskueligt at finde klubber? <br> Søg efter sportsgrene her! Skriv fx "fodbold" eller "basketball"! </p>
+<input style="position: absolute; left: 42%;" type="text" id="user_search" placeholder="Søg efter sportsgren!">
+<button class="button" id="search_button" type="button" onclick="submitSport()" style="cursor: pointer; position: absolute; left: 56%; ">Søg!</button>
+<br/>
+<br/>
+<!--Giver "scroll" effekten til vores tabel samt positionen af den på siden, højden, bredden osv-->
+<div class="table1">
+    <!--Tabel indeholdene sportsgrenene samt "tilmeld" knappen der kalder vores tilmed funktion i funktioner.js dokumentet-->
+    <table>
+    <tr>
+        <th>Sportsgren</th>
+        <th>Klub</th>
+        <th>Tilmeld dig </th>
+    </tr>
+    <tr>
+        <td>Fodbold</td>
+        <td>HIK</td>
+        <td> <button class="button" type="button" onclick= "tilmeld()" style="cursor: pointer;">Tilmeld</button> </td>
+    </tr>
+    <tr>
+        <td>H&aring;ndbold</td>
+        <td>Lyngby håndbold</td>
+        <td> <button class="button" type="button" onclick="tilmeld()" style="cursor: pointer;">Tilmeld</button> </td>
+    </tr>
+    <tr>
+        <td>Badminton</td>
+        <td>Hiller&oslash;d badminton klub</td>
+        <td> <button class="button" type="button" onclick="tilmeld()" style="cursor: pointer;">Tilmeld</button> </td>
+    </tr>
+    <tr>
+        <td>Sv&oslash;mmning </td>
+        <td>Frederiksberg sv&oslash;mmning </td>
+        <td> <button class="button" type="button" onclick="tilmeld()" style="cursor: pointer;">Tilmeld</button> </td>
+    </tr>
+    <tr>
+        <td>F&aelig;gtning</td>
+        <td>Gentofte f&aelig;gteklub</td>
+        <td> <button class="button" type="button" onclick="tilmeld()" style="cursor: pointer;">Tilmeld</button> </td>
+    </tr>
+    <tr>
+        <td>Basketball</td>
+        <td>SISU basketball</td>
+        <td> <button class="button" type="button" onclick="tilmeld()" style="cursor: pointer;">Tilmeld</button> </td>
+    </tr>
+    <tr>
+        <td>Svømning</td>
+        <td>Brøndby svømmeklub</td>
+        <td> <button class="button" type="button" onclick="tilmeld()" style="cursor: pointer;">Tilmeld</button> </td>
+    </tr>
+    <tr>
+        <td>E-sport</td>
+        <td>E-sport K&oslash;benhavn</td>
+        <td> <button class="button" type="button" onclick="tilmeld()" style="cursor: pointer;">Tilmeld</button> </td>
+    </tr>
+    <tr>
+        <td>Badminton</td>
+        <td>Køge badminton</td>
+        <td> <button class="button" type="button" onclick="tilmeld()" style="cursor: pointer;">Tilmeld</button> </td>
+    </tr>
+    <tr>
+        <td>Volleyball</td>
+        <td>Amager Volleyball</td>
+        <td> <button class="button" type="button" onclick="tilmeld()" style="cursor: pointer;">Tilmeld</button> </td>
+    </tr>
+        <tr>
+            <td>Håndbold </td>
+            <td>Frederiksberg håndbold </td>
+            <td> <button class="button" type="button" onclick= "tilmeld()" style="cursor: pointer;">Tilmeld</button> </td>
+        </tr>
+        <tr>
+            <td>Atletik</td>
+            <td>Sparta atletik</td>
+            <td> <button class="button" type="button" onclick= "tilmeld()" style="cursor: pointer;">Tilmeld</button> </td>
+        </tr>
+        <tr>
+            <td>Håndbold</td>
+            <td>HIK håndbold</td>
+            <td> <button class="button" type="button" onclick= "tilmeld()" style="cursor: pointer;">Tilmeld</button> </td>
+        </tr>
+        <tr>
+            <td>Fægtning</td>
+            <td>Farum fægtning</td>
+            <td> <button class="button" type="button" onclick= "tilmeld()" style="cursor: pointer;">Tilmeld</button> </td>
+        </tr>
+        <tr>
+            <td>Fodbold</td>
+            <td>Islev fodbold</td>
+            <td> <button class="button" type="button" onclick= "tilmeld()" style="cursor: pointer;">Tilmeld</button> </td>
+        </tr>
+        <tr>
+            <td>Basketball</td>
+            <td>Østerbro basketball</td>
+            <td> <button class="button" type="button" onclick= "tilmeld()" style="cursor: pointer;">Tilmeld</button> </td>
+        </tr>
+        <tr>
+            <td>Fodbold</td>
+            <td>Jægersborg fodbold</td>
+            <td> <button class="button" type="button" onclick= "tilmeld()" style="cursor: pointer;">Tilmeld</button> </td>
+        </tr>
+        <tr>
+            <td>Badminton </td>
+            <td>Rødovre badminton </td>
+            <td> <button class="button" type="button" onclick= "tilmeld()" style="cursor: pointer;">Tilmeld</button> </td>
+        </tr>
+
+</table>
+
+</div>
+<!--Sammenkæder dette dokument med "script.js javascript til at fungere-->
+<script>
+    function tilmeld() {
+        window.location = "tilmelding.html"
+    }
+    let input = document.getElementById("user_search");
+    input.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13){
+            event.preventDefault();
+            document.getElementById("search_button").click();
+        }
+    });
+</script>
+<script src="script.js"></script>
+</body>
+</html>

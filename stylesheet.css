@@ -1,0 +1,106 @@
+h1{text-align: center;
+    color: white;}
+h2{text-align: center;
+    color: black}
+
+body{background-image:url("Fodboldhold.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+/*linket til billedets oprindelse*/
+/*https://www.google.com/search?q=holdsport&sxsrf=ACYBGNTxLlIBYWxbJVZebSAYvXDK5zMEqw:1571383648143&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjc6ZyhpKXlAhUCEVAKHSauC28Q_AUIEigB&biw=1440&bih=789#imgrc=USEcQieHSlchsM:*/
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.div1 {
+    margin: auto;
+    width: 20%;
+    height: 300px;
+    border: 10px solid firebrick;
+    box-sizing: border-box;
+    border-radius: 20px;
+    text-align: center;
+    background-color: firebrick;
+}
+
+.div2 {
+    margin: auto;
+    width: 20%;
+    height: 450px;
+    border: 10px solid firebrick;
+    box-sizing: border-box;
+    border-radius: 20px;
+    text-align: center;
+    background-color: firebrick;
+}
+
+.div3{
+    margin: auto;
+    width: 400px;
+    height: 750px;
+    border: 5px solid firebrick;
+    box-sizing: border-box;
+    top: 150px;
+    background-color: white;
+    text-align: center;
+}
+
+.input {border: 5px solid white}
+
+.topnav {
+    overflow: hidden;
+    background-color: firebrick;
+}
+
+.topnav a {
+    float: left;
+    color: white;
+    width: 22%;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+table {
+    margin: auto;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #DAD2D0;
+}
+tr:nth-child(odd){
+    background-color:firebrick;
+}
+.table1{
+    position:absolute;
+    width:80%;
+    height:40%;
+    z-index:1;
+    overflow: scroll;
+    left: 10%; "
+}
+
+.button {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px 2px;
+    cursor: pointer;
+}

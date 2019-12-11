@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <meta charset="UTF-8">
+    <title>Book Din Sport</title>
+</head>
+<body>
+
+<h1>Velkommen til <br/> Book Din Sport</h1>
+
+<div class="div1">
+<h2>Login</h2>
+    <input class="input" type="text" id="user_name" placeholder="brugernavn"/>
+    <br/>
+    <br/>
+    <input class="input" type="password" id="user_password" placeholder="password"/>
+    <br/>
+    <br/>
+    <button class="button" id="login_knap" onclick="login()" style="cursor: pointer;" >login</button>
+    <br/>
+    <p>Ikke oprettet endnu?</p>
+    <a href="Oprettelse.html">TRYK HER!</a>
+
+
+</div>
+
+<script>
+    let loginInput = document.getElementById("user_password")
+    loginInput.addEventListener("keyup", function (event) {
+        if (event.keyCode ===13){
+            event.preventDefault();
+            document.getElementById("login_knap").click();
+        }
+    });
+</script>
+<script src="script.js" ></script>
+</body>
+</html>
